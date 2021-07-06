@@ -74,6 +74,6 @@ public class ProgramaPrincipal {
 		}
 		boletim.getNotas().add(nota);
 
-		System.out.println(boletim);
+		System.out.println(boletim.imprimeBoletim());
 	}
 }

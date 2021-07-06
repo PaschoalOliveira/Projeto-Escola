@@ -2,13 +2,32 @@ package models;
 
 public class Aluno {
 
+	static private String nomeEscola;
+
 	private String nome;
-	
 	private Integer matricula;
-	
 	private Serie serie;
+	private Double mensalidade;
 	
-	public Integer numeroSerie;
+	static public void imprimeEscola(Integer x) {
+		System.out.println(nomeEscola.toUpperCase() + x);
+	}
+	
+	public static String getNomeEscola() {
+		return nomeEscola;
+	}
+
+	public static void setNomeEscola(String nomeEscola) {
+		Aluno.nomeEscola = nomeEscola;
+	}
+	
+	public Double getMensalidade() {
+		return mensalidade;
+	}
+
+	public void setMensalidade(Double mensalidade) {
+		this.mensalidade = mensalidade;
+	}
 
 	public Serie getSerie() {
 		return serie;

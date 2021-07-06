@@ -25,10 +25,10 @@ public class BoletimEscolar {
 		this.notas = notas;
 	}
 	
-	@Override
-	public String toString() {
+	public String imprimeBoletim() {
 		return this.aluno.getNome() + " " 
-			+ this.getNotas().get(0).getNota() + " "
-					+ this.getNotas().get(0).getMateria().getNome() + " ";
+				+ this.getNotas().get(0).getNota() + " "
+						+ this.getNotas().get(0).getMateria().getNome() + " ";
 	}
+	
 }

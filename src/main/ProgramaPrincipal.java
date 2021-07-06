@@ -1,11 +1,12 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 import models.Aluno;
+import models.BoletimEscolar;
 import models.Escola;
 import models.Materia;
+import models.NotaEscolar;
 import models.Serie;
 
 public class ProgramaPrincipal {
@@ -38,9 +39,12 @@ public class ProgramaPrincipal {
 			}	
 			escola.getAlunos().add(aluno);
 		}
+	
+		System.out.println("*********** Inicio da Definição das NOTAS ***********");
+		
 		
 		System.out.println("Digite a matricula do aluno");
-		Integer matriculaAluno = scan.nextInt();
+		Integer matriculaAlunoDigitado = scan.nextInt();
 		scan.nextLine();
 		
 		System.out.println("Digite a nota do aluno");
@@ -48,8 +52,28 @@ public class ProgramaPrincipal {
 		scan.nextLine();
 
 		System.out.println("Digite o identificador da materia da nota");
-		Integer idMateria = scan.nextInt();
+		Integer idMateriaDigitado = scan.nextInt();
 		scan.nextLine();
+		
+		BoletimEscolar boletim = new BoletimEscolar();
+		
+		for(Aluno alunoFor : escola.getAlunos()) {
+			if(matriculaAlunoDigitado == alunoFor.getMatricula()) {
+				boletim.setAluno(alunoFor);
+			}
+		}
+		
+		NotaEscolar nota = new NotaEscolar();
+		
+		nota.setNota(notaAluno);
+		
+		for(Materia materia : boletim.getAluno().getSerie().getMaterias()) {
+			if(idMateriaDigitado == materia.getId()) {
+				nota.setMateria(materia);
+			}
+		}
+		boletim.getNotas().add(nota);
 
+		System.out.println(boletim);
 	}
 }

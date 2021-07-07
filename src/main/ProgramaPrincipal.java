@@ -8,6 +8,7 @@ import models.Escola;
 import models.Materia;
 import models.NotaEscolar;
 import models.Serie;
+import interfaces.IAluno;
 
 public class ProgramaPrincipal {
 
@@ -15,6 +16,8 @@ public class ProgramaPrincipal {
 		
 		Scanner scan = new Scanner(System.in);
 				
+		//pega aluno pelo nome
+		
 		Escola escola = new Escola();
 		escola.setNome("Figueiras");
 		

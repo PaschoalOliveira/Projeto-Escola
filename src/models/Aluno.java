@@ -1,26 +1,33 @@
 package models;
 
-public class Aluno {
+import interfaces.IAluno;
 
-	static private String nomeEscola;
+public class Aluno implements IAluno{
 
+	static final private String NOME_ESCOLA = "Juliano";
+	static final private String SESSAO_ALUNO = "id_aluno";
+	
 	private String nome;
 	private Integer matricula;
 	private Serie serie;
 	private Double mensalidade;
 	
-	public void imprime() {
-		System.out.println(nome.toUpperCase());
+	public void imprimeAluno() {
+		System.out.println(nome.toUpperCase() + "Normal");
+	}
+	
+	public void calculaMensalidade() {
+		System.out.println("teste");
+	}
+	
+	public Double calculaDesconto() {
+		return getMensalidade();
 	}
 	
 	public static String getNomeEscola() {
-		return nomeEscola;
+		return NOME_ESCOLA;
 	}
 
-	public static void setNomeEscola(String nomeEscola) {
-		Aluno.nomeEscola = nomeEscola;
-	}
-	
 	public Double getMensalidade() {
 		return mensalidade;
 	}
@@ -52,4 +59,5 @@ public class Aluno {
 	public void setMatricula(Integer matricula) {
 		this.matricula = matricula;
 	}
+
 }

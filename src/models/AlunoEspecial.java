@@ -6,7 +6,7 @@ public class AlunoEspecial extends Aluno{
 	private String especialidade;
 	
 	public void imprimeAluno() {
-		System.out.println(this.getNome().toLowerCase());
+		System.out.println(this.getNome().toLowerCase() + "Especial");
 	}
 	
 	public Double calculaDesconto() {

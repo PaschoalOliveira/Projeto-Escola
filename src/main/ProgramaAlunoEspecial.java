@@ -14,15 +14,15 @@ public class ProgramaAlunoEspecial {
 		Boolean isAlunoEspecial = scan.nextBoolean();
 		scan.nextLine();
 		
-		/*
+		Aluno aluno;
 		if(isAlunoEspecial == true) {
 			aluno = new AlunoEspecial();
 				aluno.setNome("RAfael");
 		}else {
 			aluno = new AlunoEspecial();
 			aluno.setNome("PaschOal");
-			aluno.imprimeAluno();
-		}*/
+			aluno.imprime();
+		}
 		
 		
 		

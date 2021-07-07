@@ -9,8 +9,8 @@ public class Aluno {
 	private Serie serie;
 	private Double mensalidade;
 	
-	static public void imprimeEscola(Integer x) {
-		System.out.println(nomeEscola.toUpperCase() + x);
+	public void imprime() {
+		System.out.println(nome.toUpperCase());
 	}
 	
 	public static String getNomeEscola() {
